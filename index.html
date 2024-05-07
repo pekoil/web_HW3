@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>會員登入頁 - 巴哈姆特</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .TOP-bh {
+
+            background: linear-gradient(to bottom right,#10BCCEFF,#00555f);
+            padding: 10px;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            background-color: #10bcce;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #00454f;
+        }
+        #BH-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="TOP-bh">
+    <div class="TOP-data" id="BH-top-data">
+        <a href="https://www.gamer.com.tw/">
+            <img src="https://i2.bahamut.com.tw/top_logo.svg" style="height:35px;">
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="login-box">
+        <img src="https://i2.bahamut.com.tw/logo/baha_logo_horizontal.svg" style="height:70px;">
+        <h3>會員登入</h3>
+        <form id="form-login" method="post" onsubmit="clearFields()">
+            <input type="text" id="userid" name="userid" placeholder="帳號或手機" autocomplete="username" required="" pattern="^([A-Za-z][A-Za-z0-9]{1,12}|[0-9+-]{1,18})$" maxlength="18"><br>
+            <input type="password" id="password" name="password" placeholder="密碼" autocomplete="current-password" required="" maxlength="22"><br>
+            <input type="submit" value="登入">
+        </form>
+    </div>
+</div>
+
+<script>
+    function clearFields() {
+        document.getElementById("userid").value = "";
+        document.getElementById("password").value = "";
+    }
+</script>
+<div id="BH-footer" class="width-full"><p>本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載<br>
+    巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw
+</p></div>
+</body>
+</html>
+
